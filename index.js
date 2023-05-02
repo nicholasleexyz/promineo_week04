@@ -123,3 +123,13 @@ const get_muliples_of_x = (arr, x) => arr.filter(n => n % x == 0);
 /* A function that get the multiples of a given x in an array */
 console.log(`const get_muliples_of_x = (arr, x) => arr.filter(n => n % x == 0);`);
 console.log(get_muliples_of_x([...new Array(10).keys()], 3));
+//Used to generate a checkered pattern of any given width and height
+function checkered(width, height) {
+    let arr = [];
+    for (let y = 0; y < height; y++) {
+        arr[y] = [];
+        for (let x = 0; x < width; x++)
+            arr[y][x] = y % 2 == x % 2 ? 'black' : 'white';
+    }
+    return arr;
+}
